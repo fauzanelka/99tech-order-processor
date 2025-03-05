@@ -94,7 +94,7 @@ func (p *Processor) Process() error {
 
 		// Filter by symbol and side
 		if order.Symbol == p.Symbol && order.Side == p.Side {
-			p.Logger.Infof("Processing order %s: %s %d %s at $%.2f", 
+			p.Logger.Infof("Processing order %s: %s %.2f %s at $%.2f", 
 				order.OrderID, order.Side, order.Quantity, order.Symbol, order.Price)
 			
 			if err := p.processOrder(order, 0); err != nil {
